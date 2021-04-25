@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Web Nivel 3</title>
+
+    <!--Required meta tags-->
+
+    <!--for characters ñ-->
+    <meta charset="utf-8" />
+
+    <!--for bootstrap, initial scale 1-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!--compatible with browser internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+    <!--SCSS BOOTSTRAP-->
+    <!--<link rel="stylesheet" href="dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="scss/bootstrap.css">
+    <link rel="stylesheet" href="dist/css/styles_Level1.css">
+
+    <!--Version Files CSS bootstrap download Not used -->
+    <!--<link rel="stylesheet" href="styles/bootstrap.min.css">-->
+
+
+    <!--Usage web 'ionicons'-->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="Jquery/jquery-1.6.3.min.js"></script> <!--Link a libreria JQuery-->
+
+
+    <!--FUNCIÓN a LIBRERIA Jquery-->
+    <!--FORMULARIO LOGIN-->
+    <script>
+
+        $(document).ready(function(){ //Ejecutar despues de cargar el documento
+
+            $("#formulario1").submit(function(event){
+            var ok = true;
+            
+            if($("#inputEmail").val()==""){
+                $("#erroremail").html("Enter your email");
+                ok = false;  
+            }
+            if( $("#inputPassword").val()=="" ){
+                $("#errorpassword").html("Enter your password");
+                ok = false;
+            }
+            return ok;
+            
+        });
+        });
+
+        
+      
+    </script>
+
+</head>
+
+<body>
+    <!--******************************************* START CONTENT ****************************************************-->
+
+
+    <!--Navegador-->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: white">
+        <!--Logo-->
+        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" /></a>
+        <h4 class="text-primary">BCN Home Kitchen</h4>
+
+        <!--Button burger-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="btn-group groupcolor" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-light btncolor text-white">About us</button>
+                <button type="button" class="btn btn-light btncolor text-white">What we do</button>
+                <button type="button" class="btn btn-light btncolor text-white">Products</button>
+                <button type="button" class="btn btn-light btncolor text-white">Promotions</button>
+                <button type="button" class="btn btn-light btncolor text-white">News & Events</button>
+                <button type="button" class="btn btn-light btncolor text-white">Contact</button>
+            </div>
+        </div>
+
+
+        <!--Keep outside the login user for small devices -->
+        <button type="button" class="btn btn-light btnuser text-white" data-toggle="modal"
+            data-target="#log">Login</button>
+        <button type="button" class="btn btn-light btnuser text-white" data-toggle="modal"
+            data-target="#registro">Register</button>
+    </nav>
+
+    <!--*********************Sections********************************-->
+    <section class="sectionone">
+
+        <div class="container-fluid one">
+            <h2 class="text-white">Our Values</h2>
+            <p class="value text-white">Creativity. Sustainability. Commitment. Variety. Innovation. Fun!</p>
+        
+        </div>
+      
+    </section>
+
+    <!--Carousel Slides-->
+    <section class="sectiontwo topmargin-light">
+    
+        <div id="demo" class="carousel slide center" data-ride="carousel">
+            <!--Indicators-->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+                <li data-target="#demo" data-slide-to="5"></li>
+            </ul>
+            <!--Images-->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/creativity.jpg" alt="creativity" class="img-fluid">
+                    <!--img fluid adjust the image with the width of the group-->
+                    <!--text in the picture-->
+                    <div class="carousel-caption">
+                        <h3 class="captiontext text-white">CREATIVITY</h3>
+                        <p class="desc text-white">Menus prepared with imagination, combining different flavors and
+                            textures</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/barcelona.jpg" alt="bcn" class="img-fluid">
+                    <div class="carousel-caption">
+                        <h3 class="captiontext text-white">SUSTANIBILITY</h3>
+                        <p class="desc text-white">Know each corner and where there are the amazing stores with the best
+                            products in
+                            the city</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/know.jpg" alt="know" class="img-fluid">
+                    <div class="carousel-caption">
+                        <h3 class="captiontext text-white">COMMITMENT</h3>
+                        <p class="desc text-white">Helping others to grow</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/options.jpg" alt="options" class="img-fluid">
+                    <div class="carousel-caption">
+                        <h3 class="captiontext text-white">VARIETY</h3>
+                        <p class="desc text-white">Choose the best options for you and we do the rest</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/innovation.jpg" alt="projects" class="img-fluid">
+                    <div class="carousel-caption">
+                        <h3 class="captiontext text-white">INNOVATION</h3>
+                        <p class="desc text-white">Constant improvement</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/fun.jpg" alt="fun" class="img-fluid">
+                    <div class="carousel-caption">
+                        <h3 class="captiontext text-white">HAVE FUN</h3>
+                        <p class="desc text-white">Make your daily meals fun</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Controls to Left and Right-->
+            <a href="#demo" class="carousel-control-prev" data-slide="prev"><span
+                    class="carousel-control-prev-icon"></span></a>
+            <a href="#demo" class="carousel-control-next" data-slide="next"><span
+                    class="carousel-control-next-icon"></span></a>
+        </div>
+    </section>
+
+    <!--Contents-->
+
+    <section class="sectionthree topmargin-dark">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <img src="images/about.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-primary">ABOUT US</h5>
+                        <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nesciunt
+                            ut in itaque
+                            accusamus, praesentium consequatur iure blanditiis repudiandae ratione.</p>
+                        <a href="#" class="btn btn-info text-white">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <img src="images/whatwedo1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-primary">WHAT WE DO</h5>
+                        <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nesciunt
+                            ut in itaque
+                            accusamus, praesentium consequatur iure blanditiis repudiandae ratione.</p>
+                        <a href="#" class="btn btn-info text-white">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <img src="images/product1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-primary">PRODUCTS</h5>
+                        <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nesciunt
+                            ut in itaque
+                            accusamus, praesentium consequatur iure blanditiis repudiandae ratione.</p>
+                        <a href="#" class="btn btn-info text-white">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <img src="images/projects.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-primary">PROJECTS</h5>
+                        <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nesciunt
+                            ut in itaque
+                            accusamus, praesentium consequatur iure blanditiis repudiandae ratione.</p>
+                        <a href="#" class="btn btn-info text-white">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sectionfour topmargin-light">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading text-secondary">PROMOTIONS!!</h4>
+            <p class="text-muted">We have a new offers to you!<a href="#" class="text-secondary"> Follow this link</a>
+            </p>
+        </div>
+    </section>
+
+    <!--SECTION FIVE-->
+    <section class="sectionfive topmargin-light">
+        <div class="alert alert-primary">
+            <h5 class="text-secondary">Know more...!</h5>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-info text-dark">Frequent questions</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-info text-dark">Previous News</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-info text-dark">Join us!</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-info text-dark">Feedback
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="btn btn-info text-dark"> Our calendar
+                        <ion-icon name="calendar-number-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <ion-icon name="logo-whatsapp" class="wsp btn"></ion-icon>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!--FOOTER-->
+    <section class="footer topmargin-dark">
+        <div class="container">
+            <img src="images/logo.png" style="width: 10%;" alt="">
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item footer-menu">
+                <a href="#">About</a>
+            </li>
+            <li class="list-inline-item footer-menu">
+                <a href="#">What we do</a>
+            </li>
+            <li class="list-inline-item footer-menu">
+                <a href="#">Products</a>
+            </li>
+            <li class="list-inline-item footer-menu">
+                <a href="#">Projects</a>
+            </li>
+            <li class="list-inline-item footer-menu">
+                <a href="#">Promotions</a>
+            </li>
+            <li class="list-inline-item footer-menu">
+                <a href="#">News & Events</a>
+            </li>
+            <li class="list-inline-item footer-menu">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <small>@2021 All Rights Reserved</small>
+
+
+    </section>
+
+
+    <!--************************MODAL Code 'Login button'***********************************-->
+    <div class="modal fade" id="log" aria-hidden="true">
+        <!---->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--Header modal-->
+                <div class="modal-header">
+                    <h5 class="modal-title text-white">Welcome!</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!--Body modal-->
+                <div class="modal-body">
+                    <form action="/action_page.php" id="formulario1">
+                        <!--VALIDACION-->
+                        <div class="form-group row">
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email@"
+                                    name="inputEmail">
+                                <div id="erroremail"></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputPassword" placeholder="Password"
+                                name="inputPassword">
+                                <div id="errorpassword"></div>
+                              
+                                <div class="form-check">
+                                    <label for="remember" class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        <p class="checkboxtext text-danger">Do you want to save the password?</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Footer modal-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--************************MODAL Code 'Register button'***********************************-->
+    <!--MODAL-->
+    <div class="modal fade" id="registro" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title">Nice to meet you!</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!--modal Body-->
+                <div class="modal-body">
+                    <form action="/action_page.php" class="was-validated" id="formulario2">
+                        <!--VALIDACION-->
+
+
+                        <!--ENTER NAME-->
+                        <div class="form-group row">
+                            <label for="inputname" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputname" placeholder="Name"
+                                    name="inputname" required>
+                                <!--VALIDACION-->
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">This field is required</div>
+                            </div>
+                        </div>
+
+
+                        <!--ENTER SURNAME-->
+                        <div class="form-group row">
+                            <label for="inputsurname" class="col-sm-2 col-form-label">Surname</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputsurname" placeholder="Surname"
+                                name="inputsurname" required>
+                            <!--VALIDACION-->
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
+                            </div>
+                        </div>
+
+
+                        <!--ENTER AN EMAIL-->
+                        <div class="form-group row">
+                            <label for="inputemail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputemail" placeholder="Email@"
+                                    name="inputemail" required>
+                                <!--VALIDACION-->
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">This field is required</div>
+                            </div>
+                        </div>
+
+
+                        <!--ENTER A PASSWORD-->
+                        <div class="form-group row">
+                            <label for="inputpassword" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputpassword" placeholder="Password"
+                                name="inputpassword" required onblur="revisar(event)">
+                            <!--VALIDACION-->
+                            <div id="inputpassword-ok" class="valid-feedback">Valid</div>
+                            <div id="tipoPassword" class="invalid-feedback">This field is required</div>
+                            </div>
+                        </div>
+
+
+                        <!--REPEAT PASSWORD-->
+                        <div class="form-group row">
+                            <label for="inputrepeatpass" class="col-sm-2 col-form-label">Verify</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputrepeatpass"
+                                placeholder="Repeat your Password" name="inputrepeatpass" required onblur="verificar(event)">
+                            <!--VALIDACION-->
+                            <div id="inputrepeatpass-ok" class="valid-feedback">Valid</div>
+                            <div id="repeat" class="invalid-feedback">Repeat the correct password</div>
+                            </div>
+                        </div>
+
+
+                        <!--CHOOSE COUNTRY-->
+                        <div class="form-group row">
+                            <label for="selectCountry" class="col-sm-4 col-form-label">Select your country:</label>
+                            <div class="col-sm-10">
+                                <select name="country" id="pais">
+                                    <option value="nothing">Country</option>
+                                    <option value="in">India</option>
+                                    <option value="aus">Australia</option>
+                                    <option value="sp">Spain</option>
+                                    <option value="fr">France</option>
+                                    <option value="de">Germay</option>
+                                    <option value="it">Italy</option>
+                                    <option value="be">Belgium</option>
+                                    <option value="nl">Netherlands</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <!--INFO EXTRA-->
+                        <div class="form-group row">
+                            <label for="know" class="col-sm-12 col-form-label">How did you know us?</label>
+                            <label for="radio-inline" class="col-sm-2">
+                                <input type="radio" name="choose">
+                                Google
+                            </label>
+                            <label for="radio-inline" class="col-sm-2">
+                                <input type="radio" name="choose">
+                                Facebook
+                            </label>
+                            <label for="radio-inline" class="col-sm-2">
+                                <input type="radio" name="choose">
+                                Tripadvisor
+                            </label>
+                            <label for="radio-inline" class="col-sm-2">
+                                <input type="radio" name="choose">
+                                People
+                            </label>
+                            <label for="radio-inline" class="col-sm-2">
+                                <input type="radio" name="choose">
+                                Others
+                            </label>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-primary">Register!</button>
+                            </div>
+                        </div>
+                        </form>
+
+                        <!--footer modal-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--**********************************************Elements to connect URL online**********************************************************-->
+    <!--Optional JavaScript-->
+    <!--jQuery first, then Popper.js, then Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="dist/js/formularioFunctions.js"></script>
+
+
+    <!--Version Files JS bootstrap download Not Used -->
+
+    <!--<script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>-->
+</body>
+
+</html>
