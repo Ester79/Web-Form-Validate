@@ -1,0 +1,433 @@
+
+/*FONT*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+section {
+    display: block;
+    box-shadow: 0 2px 10px 0 indigo; /*Línea de sombreado a la barra de navegacion*/
+}
+
+/*********************************************************************************************************************/
+
+/*COMMON LAYOUTS for SECTIONS*/
+
+.topmargin-dark{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: initial;
+
+}
+
+.topmargin-light{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: initial;
+}
+
+.detailsections img{
+    position: relative;
+}
+
+.detailsections a{  
+    background-color:purple;
+    color: white;
+}
+
+.link{
+    color: black;
+}
+
+.sectionthree a{
+    color:white;
+    font-size: 15px;
+    background-color:black;
+    opacity: .7;
+}
+
+
+
+/*********************************************************************************************************************/
+
+/*NAV*/
+/*LINE DIVISOR NAV*/
+.navbar {
+    background: white;
+    box-shadow: 0 2px 4px 0 black; /*Línea de sombreado a la barra de navegacion*/
+    min-height: 100px; /*Altura minima de 100px*/
+}
+
+.navbar h4{
+    margin-right: 10px;
+    margin-top: auto;
+    color: purple;
+    font-weight: bold; 
+}
+
+.navbar-brand img{
+    width: 80px; 
+}
+
+.usuario {
+    font-size: 30px;
+}
+
+#navbarCollapse {
+    margin-top: auto;
+    margin-left: 90px;
+    margin-right: 10px;
+}
+
+
+/*********************************************************************************************************************/
+
+/*BUTTONS NAV*/
+.btn{
+    margin-top: auto;
+}
+
+.btn-group {
+    margin-right: 20px;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.btnmodal {
+    margin-right: 190px; 
+    color: white;
+}
+
+.btncolor {
+    background-color: lightgray;
+    color:white;
+}
+
+.btnuser{
+    font-size: 12px;
+    background-color: blue;
+    color: white; 
+}
+
+.groupcolor {
+    background-color:white;
+    padding: 3px;
+    border-style: groove;
+}
+
+.btn-primary{
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+
+form.busqueda {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+form.busqueda input[type=text]{
+    background-color: red;
+    
+}
+
+form.busqueda button{
+    background-color: red;
+}
+
+
+/*********************************************************************************************************************/
+/*MODAL*/
+.checkboxtext{
+    color: red;
+}
+
+.modal-header {
+    background-color: black;
+    color: white;
+}
+
+.close {
+    color: white;
+    opacity: 1;
+}
+
+/*********************************************************************************************************************/
+
+/*SECTIONS*/
+
+/**SECTION ONE*/
+.sectionone{
+    background-color:purple;
+    justify-content: center;
+    padding-bottom: 3px;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    margin: 20px auto 20px auto;
+}
+
+.one{
+    margin-top: 125px;
+    padding-top: 5px;
+}
+
+.container-fluid h2{
+    text-align: center;
+    color:white;
+}
+
+.value{
+    font-size: 20px;
+    text-align: center;
+    color:white;
+    margin-bottom: 0px;
+}
+
+/*********************************************************************************************************************/
+
+/**SECTION TWO CAROUSEL*/
+
+.sectiontwo {
+    padding-top: 3px;
+}
+
+.carousel-inner img{
+    height: 100%;
+    width: 100%
+}
+
+.center{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.captiontext{
+    font-weight: bold;
+    color: white;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 5px;
+}
+
+.desc{
+    color:white;
+    font-size: 15px;
+    margin-left: 75px;
+    margin-right: 75px;
+    border-radius: 5px;
+}
+
+.carousel-caption{
+    background-color: purple;
+    opacity: .5;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*********************************************************************************************************************/
+
+.sectionfive a{
+    font-size: 12px;
+    margin-inline-start: 20px;
+}
+
+.sectionfive ion-icon{
+    color: white;
+    font-size: 15px;  
+}
+
+
+
+.sectionfive .wsp{
+    font-size: 50px;
+    color: green;
+}
+
+
+.footer{
+    text-align: center;
+    background-color: grey;
+}
+
+.footer img{
+    border-radius: 10px;
+}
+
+.footer .list-inline{
+    margin-top: 20px;
+}
+
+.footer .list-inline a{
+    color:white;
+    padding-inline-start: 25px;
+    font-size: 12px;
+}
+
+.footer ion-icon{
+    font-size: 25px;
+}
+
+.footer small{
+    color: white;
+}
+
+/************************************************MEDIA QUERY******************************************************/
+/*Extra small devices (portrait phones, less than 576px)*/
+@media(max-width: 575.98px){
+    .navbar {
+        display: block;
+    }
+    .modal{
+        width: 90%;
+    }
+   
+    /*SECTION ONE*/
+    .sectionone{
+        display: block;
+    }
+    .sectionone .value{
+        margin-top: 15px;
+    }
+
+    /*SECTION TWO*/
+    .sectiontwo .carousel{
+        width: 100%;
+    }
+
+    .sectiontwo .captiontext {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sectiontwo .carousel h3{
+        font-size: 15px;
+    }
+
+    .sectiontwo .desc{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sectiontwo .carousel p{
+        font-size: 10px;
+    }
+
+    /*SECTION FIVE*/
+    .sectionfive {
+        margin-left: auto;
+    }
+    .sectionfive .list-inline-item{
+        display: block;
+        padding-block-start: 5px;
+    } 
+
+    /*SECTION FOOTER*/
+    .footer .list-inline-item{
+        display: block;
+    }
+}
+
+
+/*Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 300px) and (max-width: 575.9px) {
+
+    #navbarCollapse {
+        margin-left: 0;
+    }
+
+    #navbarCollapse .btn-group{
+        display: block;
+        clear: both;
+    }
+
+    #navbarCollapse .btn{
+        display: block;
+        clear: both;
+        width: 100%;
+    }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar {
+        display: block;
+    }
+
+    .modal{
+        width: 100%;
+    }
+
+ }
+
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar {
+        display: block;
+    }
+
+    .modal{
+        width: 100%;
+    }
+ }
+
+ /*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .navbar {
+        display: block;
+    }
+ }
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
