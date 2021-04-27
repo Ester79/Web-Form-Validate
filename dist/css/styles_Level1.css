@@ -344,6 +344,24 @@ form.busqueda button{
 }
 
 
+/*Estilos VALIDACIONES*/
+#noemail, #nopassword, #noname, #nosurname, #noemailr, #erroremail, #errorpassword{
+    color: red;
+}
+
+#siemail, #sipassword, #siname, #sisurname, #siemailr{
+    color:green;
+}
+
+.okpassword{
+    color: green;
+}
+
+.nokpassword{
+    color: red;
+}
+
+
 /*Small devices (landscape phones, 576px and up)*/
 
 @media (min-width: 300px) and (max-width: 575.9px) {

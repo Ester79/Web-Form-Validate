@@ -29,31 +29,7 @@
     <script src="Jquery/jquery-1.6.3.min.js"></script> <!--Link a libreria JQuery-->
 
 
-    <!--FUNCIÓN a LIBRERIA Jquery-->
-    <!--FORMULARIO LOGIN-->
-    <script>
-
-        $(document).ready(function(){ //Ejecutar despues de cargar el documento
-
-            $("#formulario1").submit(function(event){
-            var ok = true;
-            
-            if($("#inputEmail").val()==""){
-                $("#erroremail").html("Enter your email");
-                ok = false;  
-            }
-            if( $("#inputPassword").val()=="" ){
-                $("#errorpassword").html("Enter your password");
-                ok = false;
-            }
-            return ok;
-            
-        });
-        });
-
-        
-      
-    </script>
+    
 
 </head>
 
@@ -344,61 +320,69 @@
 
 
     <!--************************MODAL Code 'Login button'***********************************-->
-    <div class="modal fade" id="log" aria-hidden="true">
-        <!---->
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!--Header modal-->
-                <div class="modal-header">
-                    <h5 class="modal-title text-white">Welcome!</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+  <div class="modal fade" id="log" aria-hidden="true">
+    <!---->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--Header modal-->
+            <div class="modal-header">
+                <h5 class="modal-title text-white">Welcome!</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
 
-                <!--Body modal-->
-                <div class="modal-body">
-                    <form action="/action_page.php" id="formulario1">
-                        <!--VALIDACION-->
-                        <div class="form-group row">
-                            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email@"
-                                    name="inputEmail">
-                                <div id="erroremail"></div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Password"
-                                name="inputPassword">
-                                <div id="errorpassword"></div>
-                              
-                                <div class="form-check">
-                                    <label for="remember" class="form-check-label">
-                                        <input type="checkbox" class="form-check-input">
-                                        <p class="checkboxtext text-danger">Do you want to save the password?</p>
-                                    </label>
-                                </div>
-                            </div>
+            <!--Body modal-->
+            <div class="modal-body">
+                <form action="/action_page.php" class="is-invalid" >
+                    <!--VALIDACION-->
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email@"
+                                name="inputEmail" onblur="emailvacio(event)">
+                             <!--VALIDACION-->
+                             <div id="siemail"></div>
+                             <!--VALIDACION-->
+                             <div id="noemail"></div>
+                             <!--VALIDACION-->
 
                         </div>
-                        <div class="form-group row">
-                            <div class="col-sm-2">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password"
+                            name="inputPassword" onblur="passwordvacio(event)">
+                            <!--VALIDACION-->
+                            <div id="sipassword"></div>
+                            <!--VALIDACION-->
+                            <div id="nopassword"></div>
+                            <!--VALIDACION-->
+                            <div class="form-check">
+                                <label for="remember" class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    <p class="checkboxtext text-danger">Do you want to save the password?</p>
+                                </label>
                             </div>
                         </div>
-                    </form>
-                </div>
 
-                <!--Footer modal-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-primary" onclick="enviar(event)">Sign in</button> <!--button-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--Footer modal-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!--************************MODAL Code 'Register button'***********************************-->
+     <!--************************MODAL Code 'Register button'***********************************-->
     <!--MODAL-->
     <div class="modal fade" id="registro" aria-hidden="true">
         <div class="modal-dialog">
@@ -410,7 +394,7 @@
                 </div>
                 <!--modal Body-->
                 <div class="modal-body">
-                    <form action="/action_page.php" class="was-validated" id="formulario2">
+                    <form action="/action_page.php" class="is-invalid">
                         <!--VALIDACION-->
 
 
@@ -419,10 +403,10 @@
                             <label for="inputname" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputname" placeholder="Name"
-                                    name="inputname" required>
+                                    name="inputname" onblur="namevacio()">
                                 <!--VALIDACION-->
-                                <div class="valid-feedback">Valid</div>
-                                <div class="invalid-feedback">This field is required</div>
+                                <div id="siname"></div>
+                                <div id="noname"></div>
                             </div>
                         </div>
 
@@ -432,25 +416,28 @@
                             <label for="inputsurname" class="col-sm-2 col-form-label">Surname</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputsurname" placeholder="Surname"
-                                name="inputsurname" required>
+                                name="inputsurname" onblur="surnamevacio()">
                             <!--VALIDACION-->
-                            <div class="valid-feedback">Valid</div>
-                            <div class="invalid-feedback">This field is required</div>
+                            <div id="sisurname"></div>
+                            <div id="nosurname"></div>
                             </div>
                         </div>
 
 
                         <!--ENTER AN EMAIL-->
                         <div class="form-group row">
-                            <label for="inputemail" class="col-sm-2 col-form-label">Email</label>
+                            <label for="emailr" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputemail" placeholder="Email@"
-                                    name="inputemail" required>
+                                <input type="email" class="form-control" id="emailr" placeholder="Email@"
+                                    name="emailr" onblur="emailrvacio(event)">
                                 <!--VALIDACION-->
-                                <div class="valid-feedback">Valid</div>
-                                <div class="invalid-feedback">This field is required</div>
+                                <div id="siemailr"></div>
+                                <div id="noemailr"></div>
                             </div>
                         </div>
+
+
+                       
 
 
                         <!--ENTER A PASSWORD-->
@@ -458,10 +445,10 @@
                             <label for="inputpassword" class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="inputpassword" placeholder="Password"
-                                name="inputpassword" required onblur="revisar(event)">
+                                name="inputpassword" onblur="revisar(event)">
                             <!--VALIDACION-->
-                            <div id="inputpassword-ok" class="valid-feedback">Valid</div>
-                            <div id="tipoPassword" class="invalid-feedback">This field is required</div>
+                            <div id="inputpassword-ok" class="okpassword"></div>
+                            <div id="tipoPassword" class="nokpassword"></div>
                             </div>
                         </div>
 
@@ -471,10 +458,10 @@
                             <label for="inputrepeatpass" class="col-sm-2 col-form-label">Verify</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="inputrepeatpass"
-                                placeholder="Repeat your Password" name="inputrepeatpass" required onblur="verificar(event)">
+                                placeholder="Repeat your Password" name="inputrepeatpass" onblur="verificar(event)">
                             <!--VALIDACION-->
-                            <div id="inputrepeatpass-ok" class="valid-feedback">Valid</div>
-                            <div id="repeat" class="invalid-feedback">Repeat the correct password</div>
+                            <div id="inputrepeatpass-ok" class="okpassword"></div>
+                            <div id="repeat" class="nokpassword"></div>
                             </div>
                         </div>
 
@@ -525,7 +512,7 @@
 
                         <div class="form-group row">
                             <div class="col-sm-2">
-                                <button type="submit" class="btn btn-primary">Register!</button>
+                                <button type="submit" class="btn btn-primary" onclick="go(event)">Register!</button>
                             </div>
                         </div>
                         </form>
