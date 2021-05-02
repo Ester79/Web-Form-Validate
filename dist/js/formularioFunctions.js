@@ -188,7 +188,7 @@ function go(event){
 
 
 
-    if((nom != "" && cognom !="" && emailregistro !="" && repeat !="") && ((pass.length >= 8) || (pass.match(contienenumero)) || (pass.match(mayuscula))) && (repeat == pass)){
+    if(nom && cognom && emailregistro && repeat  && pass && pass.length >= 8 && pass.match(contienenumero) && pass.match(mayuscula) && repeat == pass){
         envia = true;
     }else{
         event.preventDefault();
